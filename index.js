@@ -3,8 +3,13 @@ const buttons = document.querySelectorAll("button");
 [].forEach.call(buttons, function (button) {
   button.addEventListener(
     "click",
-    function () {
-      //Lägg in och fyll datalagret vid checkout
+    function () {      
+      window.dataLayer = window.dataLayer || [];
+
+      window.dataLayer.push({
+        event: "Checkout",
+        product: button.GetAttribute("data-product")
+      });
 
       window.location =
         "thankyou.html?product=" +
