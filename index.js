@@ -6,9 +6,9 @@ const buttons = document.querySelectorAll("button");
     function () {      
       window.dataLayer = window.dataLayer || [];
 
-      dataLayer.push({
+      window.dataLayer.push({
         event: "Checkout",
-        product: button.GetAttribute("data-product")
+        product: button.getAttribute("data-product")
       });
 
       window.location =
