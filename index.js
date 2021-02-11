@@ -6,7 +6,7 @@ const buttons = document.querySelectorAll("button");
     function () {      
       window.dataLayer = window.dataLayer || [];
 
-      window.dataLayer.push({
+      dataLayer.push({
         event: "Checkout",
         product: button.GetAttribute("data-product")
       });
